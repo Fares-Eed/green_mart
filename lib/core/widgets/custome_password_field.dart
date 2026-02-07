@@ -6,10 +6,11 @@ class CustomePasswordField extends StatefulWidget {
   const CustomePasswordField({
     super.key,
     
-    this.prefixIcon,
+    this.prefixIcon, this.validator,
     
   });
   
+  final String? Function(String?)? validator;
   final Widget? prefixIcon;
   
 
@@ -32,10 +33,10 @@ class _CustomePasswordFieldState extends State<CustomePasswordField> {
           obscureText==true ? eyeIcon=Icon(Icons.remove_red_eye):eyeIcon= Icon(Icons.remove_red_eye_outlined);
         });
         }, icon:eyeIcon),
-        fillColor: AppColors.textFieldColor,
+        fillColor: AppColors.accentColor,
         filled: true,
         hintText: '*************',
-        hintStyle: TextStyles.body.copyWith(color: AppColors.normalColor),
+        hintStyle: TextStyles.body.copyWith(color: AppColors.blackMediumColor),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(18.12),
           borderSide: BorderSide.none
@@ -51,8 +52,16 @@ class _CustomePasswordFieldState extends State<CustomePasswordField> {
           borderSide: BorderSide.none
 
         ),
+                focusedErrorBorder:  OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18.12),
+          borderSide: BorderSide.none
+
+        ),
       ),
+      
       obscureText: obscureText,
+
+      validator: widget.validator,
     );
   }
 }

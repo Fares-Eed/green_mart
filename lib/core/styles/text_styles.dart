@@ -26,7 +26,7 @@ class TextStyles {
   static TextStyle body =TextStyle(
     
                     color: AppColors.blackColor,
-                    fontSize: 14,
+                    fontSize: 15,
                     fontFamily: 'Poppins'
   );
   static TextStyle button =TextStyle(
