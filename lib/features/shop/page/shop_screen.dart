@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:green_mart/core/constants/app_assets.dart';
 import 'package:green_mart/core/styles/app_colors.dart';
-import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/core/widgets/custom_svg_picture.dart';
 import 'package:green_mart/features/shop/widget/best_selling_builder.dart';
 import 'package:green_mart/features/shop/widget/exclusive_offer_builder.dart';
