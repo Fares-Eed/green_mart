@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:green_mart/core/constants/app_assets.dart';
 import 'package:green_mart/core/styles/app_colors.dart';
-import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/core/widgets/custom_svg_picture.dart';
 import 'package:green_mart/features/main/page/Account_screen.dart';
 import 'package:green_mart/features/main/page/Favourite_screen.dart';
 import 'package:green_mart/features/main/page/cart_screen.dart';
 import 'package:green_mart/features/main/page/explore_screen.dart';
-import 'package:green_mart/features/main/page/shop_screen.dart';
+import 'package:green_mart/features/shop/page/shop_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
   @override
@@ -29,10 +28,9 @@ class _MainAppScreenState extends State<MainAppScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: screens[currentIndex],
-      backgroundColor: AppColors.whiteColor,
 
-      bottomNavigationBar:
-       Container(
+      //  backgroundColor: AppColors.whiteColor,
+      bottomNavigationBar: Container(
         padding: EdgeInsets.only(top: 8),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
@@ -41,20 +39,15 @@ class _MainAppScreenState extends State<MainAppScreen> {
             BoxShadow(
               offset: Offset(0, -5),
               blurRadius: 10,
-              color: Color(0xff555E58).withValues(alpha: 0.1)
-            )
-          ]
+              color: Color(0xff555E58).withValues(alpha: 0.1),
+            ),
+          ],
         ),
 
         child: BottomNavigationBar(
-          type: BottomNavigationBarType.fixed,
-          elevation: 0,
-          backgroundColor: Colors.transparent,
+       
           currentIndex: currentIndex,
-          selectedItemColor: AppColors.primaryColor,
-          unselectedItemColor: AppColors.blackColor,
-          selectedLabelStyle: TextStyles.small,
-          unselectedLabelStyle: TextStyles.small.copyWith(fontSize: 10.8),
+
           onTap: (index) {
             setState(() {
               currentIndex = index;

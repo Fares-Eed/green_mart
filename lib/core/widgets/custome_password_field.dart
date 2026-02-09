@@ -33,30 +33,12 @@ class _CustomePasswordFieldState extends State<CustomePasswordField> {
           obscureText==true ? eyeIcon=Icon(Icons.remove_red_eye):eyeIcon= Icon(Icons.remove_red_eye_outlined);
         });
         }, icon:eyeIcon),
-        fillColor: AppColors.accentColor,
-        filled: true,
+
         hintText: '*************',
-        hintStyle: TextStyles.body.copyWith(color: AppColors.blackMediumColor),
-        enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(18.12),
-          borderSide: BorderSide.none
+        //textStyle anf fill color is in theme
 
-        ),
-                focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(18.12),
-          borderSide: BorderSide.none
+        //borders is in theme
 
-        ),
-        errorBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(18.12),
-          borderSide: BorderSide.none
-
-        ),
-                focusedErrorBorder:  OutlineInputBorder(
-          borderRadius: BorderRadius.circular(18.12),
-          borderSide: BorderSide.none
-
-        ),
       ),
       
       obscureText: obscureText,

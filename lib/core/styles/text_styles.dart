@@ -1,44 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:green_mart/core/styles/app_colors.dart';
+
 
 class TextStyles {
-  static TextStyle headline =TextStyle(
-    
-                    color: AppColors.blackColor,
-                    fontSize: 43,
-                    fontWeight: FontWeight.w600,
-                    fontFamily: 'Poppins'
+  static TextStyle headline = TextStyle(
+    fontSize: 48,
+    fontWeight: FontWeight.w600,
   );
-  static TextStyle title =TextStyle(
-    
-                    color: AppColors.blackColor,
-                    fontSize: 22 ,
-                    fontWeight: FontWeight.w600,
-                    fontFamily: 'Poppins'
+  static TextStyle title = TextStyle(fontSize: 22, fontWeight: FontWeight.w600);
+  static TextStyle subtitle = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w600,
   );
-  static TextStyle subtitle =TextStyle(
-    
-                    color: AppColors.blackColor,
-                    fontSize: 18,
-                    fontWeight: FontWeight.w600,
-                    fontFamily: 'Poppins'
-  );
-  static TextStyle body =TextStyle(
-    
-                    color: AppColors.blackColor,
-                    fontSize: 15,
-                    fontFamily: 'Poppins'
-  );
-  static TextStyle button =TextStyle(
-    
-                    color:AppColors.blackColor,
-                    fontSize: 16,
-                    fontFamily: 'Poppins'
-  );
-  static TextStyle small =TextStyle(
-    
-                    color: AppColors.blackColor,
-                    fontSize: 12.5,
-                    fontFamily: 'Poppins'
-  );
+  static TextStyle body = TextStyle(fontSize: 16);
+  static TextStyle button = TextStyle(fontSize: 14);
+  static TextStyle small = TextStyle(fontSize: 12);
 }

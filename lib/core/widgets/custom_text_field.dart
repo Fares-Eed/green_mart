@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:green_mart/core/styles/app_colors.dart';
-import 'package:green_mart/core/styles/text_styles.dart';
+
 
 class CustomTextField extends StatelessWidget {
   const CustomTextField({
@@ -28,17 +27,12 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         prefixIcon: prefixIcon,
         suffixIcon: suffixIcon,
-        fillColor: AppColors.accentColor,
-        filled: true,
         hintText: hint,
-        hintStyle: TextStyles.body.copyWith(color: AppColors.blackMediumColor),
-        
+        //borders is in theme
+        //textStyle anf fill color is in theme
 
-        enabledBorder: borderLessStyle(),
-        focusedBorder: borderLessStyle(),
-        errorBorder: borderLessStyle(),
-        focusedErrorBorder: borderLessStyle(),
-        disabledBorder: borderLessStyle(),
+
+       
       ),
       validator: validator,
       //only digits
@@ -47,10 +41,5 @@ class CustomTextField extends StatelessWidget {
     );
   }
 
-  OutlineInputBorder borderLessStyle() {
-    return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(18.12),
-      borderSide: BorderSide.none,
-    );
-  }
+ 
 }

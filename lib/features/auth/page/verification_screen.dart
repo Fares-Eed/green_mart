@@ -17,7 +17,7 @@ class _VerificationState extends State<VerificationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+    //  backgroundColor: AppColors.whiteColor,
       body: Center(
         child: Padding(
           padding: const EdgeInsets.all(15.0),
