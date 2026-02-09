@@ -5,7 +5,7 @@
 
 **Green Mart** is a Grocery E-commerce App. This repository currently focuses on the **UI implementation** for the Authentication flow (Onboarding & Auth).
 
-> 🚧 **Status:** Under Development (Phase 1: UI & Auth)
+> 🚧 **Status:** Under Development (Phase 1: UI & Auth)  (Phase 2:Main App Screen (Shop))
 
 ---
 ## 📱 Screenshots
@@ -18,8 +18,9 @@
 
 | Number Screen | Verification Screen | Main App Screen |
 |:---:|:---:|:---:|
-| <img src="https://github.com/user-attachments/assets/d29ae371-8292-4be5-a2ee-e2abb0c604e9" width="220" /> | <img src="https://github.com/user-attachments/assets/9086a16b-b176-4d2f-8d72-0994ae06e2fd" width="220" /> | <img src="https://github.com/user-attachments/assets/5ba3b8de-a55a-4a8f-bc5e-76233309abe0" width="220" /> |
+| <img src="https://github.com/user-attachments/assets/d29ae371-8292-4be5-a2ee-e2abb0c604e9" width="220" /> | <img src="https://github.com/user-attachments/assets/9086a16b-b176-4d2f-8d72-0994ae06e2fd" width="220" /> | <img src="https://github.com/user-attachments/assets/e4080ec1-fc10-4757-8930-61ea1bfac0d4" width="220" /> |
 ---
+
 
 ## 🗺️ Roadmap & Features
 
