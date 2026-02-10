@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:green_mart/core/styles/app_colors.dart';
-import 'package:green_mart/core/styles/text_styles.dart';
 
 class CustomePasswordField extends StatefulWidget {
   const CustomePasswordField({
@@ -35,7 +33,7 @@ class _CustomePasswordFieldState extends State<CustomePasswordField> {
         }, icon:eyeIcon),
 
         hintText: '*************',
-        //textStyle anf fill color is in theme
+        //textStyle and fill color is in theme
 
         //borders is in theme
 

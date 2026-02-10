@@ -60,6 +60,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           value.length < 6) {
                         return 'pleas enter your Email';
                       }
+                      return null;
                     },
                   ),
                   SizedBox(height: 12.5),

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class TextStyles {
   static TextStyle headline = TextStyle(
     fontSize: 48,
@@ -13,5 +12,6 @@ class TextStyles {
   );
   static TextStyle body = TextStyle(fontSize: 16);
   static TextStyle button = TextStyle(fontSize: 14);
+  static TextStyle medium = TextStyle(fontSize: 14);
   static TextStyle small = TextStyle(fontSize: 12);
 }

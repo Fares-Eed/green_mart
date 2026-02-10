@@ -9,11 +9,13 @@ class ShopSearchBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: CustomTextField(
-        onTap: onTap, //pushTo SearchScreen
-        enabled: false,
-        hint: 'Search Store',
-        prefixIcon: Icon(Icons.search),
+      child: GestureDetector(
+        onTap: onTap,
+        child: CustomTextField(
+          enabled: false,
+          hint: 'Search Store',
+          prefixIcon: Icon(Icons.search),
+        ),
       ),
     );
   }

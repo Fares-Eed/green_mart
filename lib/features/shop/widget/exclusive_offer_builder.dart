@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:green_mart/core/functions/navigations.dart';
 import 'package:green_mart/core/styles/app_colors.dart';
 import 'package:green_mart/core/styles/text_styles.dart';
+import 'package:green_mart/features/beverages/bage/beverages_screen.dart';
+import 'package:green_mart/features/shop/data/product_model.dart';
 import 'package:green_mart/features/shop/widget/product_card.dart';
 
 class ExclusiveOfferBuilder extends StatelessWidget {
@@ -20,7 +23,7 @@ class ExclusiveOfferBuilder extends StatelessWidget {
               Text('Exclusive Offer', style: TextStyles.title),
               Spacer(),
               TextButton(
-                onPressed: () {},
+                onPressed: () {pushTo(context, BeveragesScreen());},
                 child: Text(
                   'See all',
                   style: TextStyles.body.copyWith(
@@ -37,16 +40,16 @@ class ExclusiveOfferBuilder extends StatelessWidget {
           height:
               255, //the list view should be sized ,so we used the sized box to all of the list view
           child: ListView.separated(
-            itemCount: 30,
+            itemCount: offerProducts.length,
             scrollDirection: Axis.horizontal,
     
             separatorBuilder: (context, index) {
               return SizedBox(width: 10);
             },
     
-            //
+            //ProductCard
             itemBuilder: (context, index) {
-              return ProductCard();
+              return ProductCard(model: offerProducts[index],);
             },
           ),
         ),

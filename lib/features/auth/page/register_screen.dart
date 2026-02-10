@@ -11,6 +11,8 @@ import 'package:green_mart/features/auth/page/login_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   var  formKey= GlobalKey<FormState>();
+
+  RegisterScreen({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -42,8 +44,9 @@ class RegisterScreen extends StatelessWidget {
                   CustomTextField(hint: 'sayed abdulaziz', validator: (value) {
                         if (value!.isEmpty ||
                             
-                            value.length < 2)
+                            value.length < 2) {
                           return 'pleas enter your Email';
+                        }
                       },),
                   SizedBox(height: 12),
                   Text(

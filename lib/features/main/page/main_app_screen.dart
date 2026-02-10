@@ -29,79 +29,54 @@ class _MainAppScreenState extends State<MainAppScreen> {
     return Scaffold(
       body: screens[currentIndex],
 
-      //  backgroundColor: AppColors.whiteColor,
-      bottomNavigationBar: Container(
-        padding: EdgeInsets.only(top: 8),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20),
-          color: AppColors.backgroundColor,
-          boxShadow: [
-            BoxShadow(
-              offset: Offset(0, -5),
-              blurRadius: 10,
-              color: Color(0xff555E58).withValues(alpha: 0.1),
-            ),
-          ],
-        ),
+      bottomNavigationBar: _bottomNavBar(),
+    );
+  }
 
-        child: BottomNavigationBar(
-       
-          currentIndex: currentIndex,
+  Container _bottomNavBar() {
+    return Container(
+      padding: EdgeInsets.only(top: 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: AppColors.backgroundColor,
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, -5),
+            blurRadius: 10,
+            color: Color(0xff555E58).withValues(alpha: 0.1),
+          ),
+        ],
+      ),
 
-          onTap: (index) {
-            setState(() {
-              currentIndex = index;
-            });
-          },
-          items: [
-            BottomNavigationBarItem(
-              icon: CustomSvgPicture(
-                path: AppAssets.storeSvg,
-                color: currentIndex == 0
-                    ? AppColors.primaryColor
-                    : AppColors.blackColor,
-              ),
-              label: 'shop',
-            ),
-            BottomNavigationBarItem(
-              icon: CustomSvgPicture(
-                path: AppAssets.exploreSvg,
-                color: currentIndex == 1
-                    ? AppColors.primaryColor
-                    : AppColors.blackColor,
-              ),
-              label: 'Explore',
-            ),
-            BottomNavigationBarItem(
-              icon: CustomSvgPicture(
-                path: AppAssets.cartSvg,
-                color: currentIndex == 2
-                    ? AppColors.primaryColor
-                    : AppColors.blackColor,
-              ),
-              label: 'Cart',
-            ),
-            BottomNavigationBarItem(
-              icon: CustomSvgPicture(
-                path: AppAssets.heartSvg,
-                color: currentIndex == 3
-                    ? AppColors.primaryColor
-                    : AppColors.blackColor,
-              ),
-              label: 'Favourite',
-            ),
-            BottomNavigationBarItem(
-              icon: CustomSvgPicture(
-                path: AppAssets.userSvg,
-                color: currentIndex == 4
-                    ? AppColors.primaryColor
-                    : AppColors.blackColor,
-              ),
-              label: 'Account',
-            ),
-          ],
-        ),
+      child: BottomNavigationBar(
+     
+        currentIndex: currentIndex,
+
+        onTap: (index) {
+          setState(() {
+            currentIndex = index;
+          });
+        },
+        items: [
+          _bottomNavBarItem(icon: AppAssets.storeSvg,label: 'Shop'),
+          _bottomNavBarItem(icon: AppAssets.exploreSvg,label: 'Explore'),
+          _bottomNavBarItem(icon: AppAssets.cartSvg,label: 'Cart'),
+          _bottomNavBarItem(icon: AppAssets.heartSvg,label: 'Favourite'),
+          _bottomNavBarItem(icon: AppAssets.userSvg,label: 'Account'),
+        ],
       ),
     );
+  }
+
+  BottomNavigationBarItem _bottomNavBarItem({required String icon,required label}) {
+    return BottomNavigationBarItem(
+          icon: CustomSvgPicture(
+            path: icon,
+            color: currentIndex == 0
+                ? AppColors.primaryColor
+                : AppColors.blackColor,
+          ),
+          label: label,
+        );
   }
 }
