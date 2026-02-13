@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:green_mart/core/constants/app_assets.dart';
 import 'package:green_mart/core/styles/app_colors.dart';
 import 'package:green_mart/core/widgets/custom_svg_picture.dart';
-import 'package:green_mart/features/main/page/Account_screen.dart';
-import 'package:green_mart/features/main/page/Favourite_screen.dart';
-import 'package:green_mart/features/main/page/cart_screen.dart';
-import 'package:green_mart/features/main/page/explore_screen.dart';
+import 'package:green_mart/features/Cart/page/cart_screen.dart';
+import 'package:green_mart/features/account/page/Account_screen.dart';
+import 'package:green_mart/features/favourite/page/favourite_screen.dart';
+import 'package:green_mart/features/explore/page/explore_screen.dart';
 import 'package:green_mart/features/shop/page/shop_screen.dart';
 
 class MainAppScreen extends StatefulWidget {
@@ -58,21 +58,20 @@ class _MainAppScreenState extends State<MainAppScreen> {
           });
         },
         items: [
-          _bottomNavBarItem(icon: AppAssets.storeSvg,label: 'Shop'),
-          _bottomNavBarItem(icon: AppAssets.exploreSvg,label: 'Explore'),
-          _bottomNavBarItem(icon: AppAssets.cartSvg,label: 'Cart'),
-          _bottomNavBarItem(icon: AppAssets.heartSvg,label: 'Favourite'),
-          _bottomNavBarItem(icon: AppAssets.userSvg,label: 'Account'),
+          _bottomNavBarItem(icon: AppAssets.storeSvg,label: 'Shop',index:0 ),
+          _bottomNavBarItem(icon: AppAssets.exploreSvg,label: 'Explore',index:1),
+          _bottomNavBarItem(icon: AppAssets.cartSvg,label: 'Cart',index:2),
+          _bottomNavBarItem(icon: AppAssets.heartSvg,label: 'Favourite',index:3),
+          _bottomNavBarItem(icon: AppAssets.userSvg,label: 'Account',index:4),
         ],
       ),
     );
   }
-
-  BottomNavigationBarItem _bottomNavBarItem({required String icon,required label}) {
+  BottomNavigationBarItem _bottomNavBarItem({required String icon,required label,required int index}) {
     return BottomNavigationBarItem(
           icon: CustomSvgPicture(
             path: icon,
-            color: currentIndex == 0
+            color: currentIndex == index
                 ? AppColors.primaryColor
                 : AppColors.blackColor,
           ),

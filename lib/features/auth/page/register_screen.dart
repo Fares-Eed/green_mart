@@ -8,6 +8,7 @@ import 'package:green_mart/core/widgets/custome_password_field.dart';
 import 'package:green_mart/core/widgets/custom_text_field.dart';
 import 'package:green_mart/core/widgets/main_button.dart';
 import 'package:green_mart/features/auth/page/login_screen.dart';
+import 'package:green_mart/features/main/page/main_app_screen.dart';
 
 class RegisterScreen extends StatelessWidget {
   var  formKey= GlobalKey<FormState>();
@@ -73,7 +74,8 @@ class RegisterScreen extends StatelessWidget {
                   SizedBox(height:30),
               
                   MainButton(text: 'Sign Up', onPressed: () { if (formKey.currentState!.validate()) {
-                          //login logic
+                          //Sign Up logic
+                          pushReplacment(context, MainAppScreen());
                         }}),
                   SizedBox(height: 25),
                   Row(

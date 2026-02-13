@@ -5,6 +5,7 @@ import 'package:green_mart/core/styles/app_colors.dart';
 import 'package:green_mart/core/widgets/custom_svg_picture.dart';
 import 'package:green_mart/core/styles/text_styles.dart';
 import 'package:green_mart/core/widgets/main_button.dart';
+import 'package:green_mart/features/auth/page/login_screen.dart';
 import 'package:green_mart/features/main/page/main_app_screen.dart';
 
 class WelcomScreen extends StatelessWidget {
@@ -48,7 +49,7 @@ class WelcomScreen extends StatelessWidget {
                 ),
                 SizedBox(height: 35.82),
 
-                MainButton(text: 'Get Started',onPressed: (){pushReplacment(context, MainAppScreen());},),
+                MainButton(text: 'Get Started',onPressed: (){pushReplacment(context,LoginScreen());},),
               ],
             ),
           ),

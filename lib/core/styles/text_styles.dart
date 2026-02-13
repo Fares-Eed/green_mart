@@ -11,7 +11,7 @@ class TextStyles {
     fontWeight: FontWeight.w600,
   );
   static TextStyle body = TextStyle(fontSize: 16);
-  static TextStyle button = TextStyle(fontSize: 14);
+  static TextStyle button = TextStyle(fontSize: 15);
   static TextStyle medium = TextStyle(fontSize: 14);
   static TextStyle small = TextStyle(fontSize: 12);
 }

@@ -13,6 +13,7 @@ class ShopScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //backgroundColor: AppColors.whiteColor,
         toolbarHeight: 65,
         title: Column(
           children: [

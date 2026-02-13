@@ -9,6 +9,7 @@ import 'package:green_mart/core/widgets/custom_text_field.dart';
 import 'package:green_mart/core/widgets/main_button.dart';
 import 'package:green_mart/features/auth/page/number_screen.dart';
 import 'package:green_mart/features/auth/page/register_screen.dart';
+import 'package:green_mart/features/main/page/main_app_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -91,7 +92,8 @@ class _LoginScreenState extends State<LoginScreen> {
                     text: 'Log In',
                     onPressed: () {
                       if (formKey.currentState!.validate()) {
-                        //login logic
+                        //login logic adn then 
+                        pushReplacment(context, MainAppScreen());
                       }
                     },
                   ),

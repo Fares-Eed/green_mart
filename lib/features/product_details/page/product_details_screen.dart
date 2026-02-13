@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:green_mart/core/styles/app_colors.dart';
 import 'package:green_mart/core/styles/text_styles.dart';
@@ -23,7 +21,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
       body: Column(
         children: [
           Container(
-            height: MediaQuery.sizeOf(context).height * 0.36,
+            height: MediaQuery.sizeOf(context).height * 0.37,
             decoration: BoxDecoration(
               color: AppColors.accentColor,
               borderRadius: BorderRadius.only(
@@ -36,7 +34,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               padding: const EdgeInsets.only(left: 22, right: 22),
               child: Column(
                 children: [
-                  SizedBox(height: 35),
+                  SizedBox(height: 30),
 
                   Row(
                     children: [
@@ -50,11 +48,9 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                       Icon(Icons.ios_share),
                     ],
                   ),
-                  SizedBox(height: 25),
+                  SizedBox(height: 20),
                   Hero(
-                    tag:
-                        widget.model.tag ??
-                        "", // not working
+                    tag: widget.model.tag ?? "", // not working
                     child: Image.network(
                       widget.model.image ?? "",
                       width: 300,
@@ -69,7 +65,6 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
             child: Padding(
               padding: const EdgeInsets.only(left: 22, right: 22),
               child: SingleChildScrollView(
-                //why this do not working
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -104,31 +99,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                     SizedBox(height: 30),
                     Row(
                       children: [
-                        IconButton(
-                          icon: Icon(Icons.remove, color: AppColors.greyColor),
-                          onPressed: () => setState(() => productCounter--),
-                        ),
-                        Container(
-                          height: 45,
-                          width: 45,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: AppColors.accentColor,
-                              width: 3,
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: Center(
-                            child: Text(
-                              productCounter.toString(),
-                              style: TextStyles.subtitle,
-                            ),
-                          ),
-                        ),
-                        IconButton(
-                          icon: Icon(Icons.add, color: AppColors.primaryColor),
-                          onPressed: () => setState(() => productCounter++),
-                        ),
+                        _addAndRemoveCounter(),
                         Spacer(),
                         Text(
                           widget.model.price.toString(),
@@ -156,15 +127,21 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                           Text('Nutritions', style: TextStyles.body),
                           Spacer(),
                           Container(
-                            height: 20,width: 45,
-                            decoration:  BoxDecoration(
+                            height: 20,
+                            width: 45,
+                            decoration: BoxDecoration(
                               color: AppColors.accentColor,
                               borderRadius: BorderRadius.circular(5),
-                              
-                              
                             ),
-                            child: Center(child: Text('100gr',style:TextStyles.small.copyWith(color: AppColors.greyColor) ,)),
-                          )
+                            child: Center(
+                              child: Text(
+                                '100gr',
+                                style: TextStyles.small.copyWith(
+                                  color: AppColors.greyColor,
+                                ),
+                              ),
+                            ),
+                          ),
                         ],
                       ),
                       children: [
@@ -182,9 +159,7 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                         children: [
                           Text('Review', style: TextStyles.body),
                           Spacer(),
-                          for(int i=0;i<5;i++)
-                          _orangeStareIcon(),
-                         
+                          for (int i = 0; i < 5; i++) _orangeStareIcon(),
                         ],
                       ),
                       children: [
@@ -214,11 +189,37 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
     );
   }
 
+  Row _addAndRemoveCounter() {
+    return Row(
+      children: [
+        IconButton(
+          icon: Icon(Icons.remove, color: AppColors.greyColor),
+          onPressed: () => setState(() {
+            if (productCounter > 1) {
+              setState(() => productCounter--);
+            }
+          }),
+        ),
+        Container(
+          height: 45,
+          width: 45,
+          decoration: BoxDecoration(
+            border: Border.all(color: AppColors.accentColor, width: 3),
+            borderRadius: BorderRadius.circular(15),
+          ),
+          child: Center(
+            child: Text(productCounter.toString(), style: TextStyles.subtitle),
+          ),
+        ),
+        IconButton(
+          icon: Icon(Icons.add, color: AppColors.primaryColor),
+          onPressed: () => setState(() => productCounter++),
+        ),
+      ],
+    );
+  }
+
   Icon _orangeStareIcon() {
-    return Icon(
-                          Icons.star,
-                          color: Color(0xffF3603F),
-                          size: 12.6,
-                        );
+    return Icon(Icons.star, color: Color(0xffF3603F), size: 12.6);
   }
 }

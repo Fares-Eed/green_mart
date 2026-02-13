@@ -8,7 +8,7 @@ class SearchScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: CustomTextField(hint: 'cola')),
+        title: Center(child: CustomTextField(hint: 'healthy')),
       ),
       body: Padding(
         padding: const EdgeInsets.only(top:  30.0),

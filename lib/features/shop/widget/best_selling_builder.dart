@@ -44,7 +44,7 @@ class BestSellingBuilder extends StatelessWidget {
             scrollDirection: Axis.horizontal,
     
             separatorBuilder: (context, index) {
-              return SizedBox(width: 10);
+              return SizedBox(width: 4);
             },
     
             //
