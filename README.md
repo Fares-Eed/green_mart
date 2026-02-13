@@ -5,10 +5,13 @@
 
 **Green Mart** is a Grocery E-commerce App. This repository currently focuses on the **UI implementation** for the Authentication flow (Onboarding & Auth).
 
-> 🚧 **Status:** Under Development (Phase 1: UI & Auth)  (Phase 2:Main App Screen (Shop))  (Phase 3: Product Details, Search, and Beverages Screens) 
+> 🚧 **Status:** Under Development (Phase 1: UI & Auth)  (Phase 2:Main App Screen (Shop))  (Phase 3: Product Details, Search, and Beverages Screens) (Phase 4: Explore, My Cart, Checkout, Order Accepted, and Account Screens)
+)
 
 ---
 ## 📱 Screenshots
+
+**Phase 1**
 
 | Splash Screen | Welcome Screen | Login Screen | Register Screen |
 |:---:|:---:|:---:|:---:|
@@ -16,16 +19,29 @@
 
 <br>
 
+**Phase 2**
+
 | Number Screen | Verification Screen | Main App Screen |
 |:---:|:---:|:---:|
 | <img src="https://github.com/user-attachments/assets/d29ae371-8292-4be5-a2ee-e2abb0c604e9" width="220" /> | <img src="https://github.com/user-attachments/assets/9086a16b-b176-4d2f-8d72-0994ae06e2fd" width="220" /> | <img src="https://github.com/user-attachments/assets/e4080ec1-fc10-4757-8930-61ea1bfac0d4" width="220" /> |
 
+<br>
+
+**Phase 3**
+
+
+| Product Details Screen | Search Screen | Beverages Screen |Explore Screen |
+|:---:|:---:|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/62da8b0e-c235-4f19-860f-a8a7c408ab53" width="220" /> | <img src="https://github.com/user-attachments/assets/319f919b-77c2-4c3a-938d-226df22800f1" width="220" /> | <img src="https://github.com/user-attachments/assets/5fd1696e-1f5e-466f-bf6b-baf4c5608c26" width="220" /> | <img src="https://github.com/user-attachments/assets/a34f867d-3a27-485d-bf4f-cf59f7e88036" width="220" /> |
 
 <br>
 
-| Product Details Screen | Search Screen | Beverages Screen |
-|:---:|:---:|:---:|
-| <img src="https://github.com/user-attachments/assets/62da8b0e-c235-4f19-860f-a8a7c408ab53" width="220" /> | <img src="https://github.com/user-attachments/assets/319f919b-77c2-4c3a-938d-226df22800f1" width="220" /> | <img src="https://github.com/user-attachments/assets/5fd1696e-1f5e-466f-bf6b-baf4c5608c26" width="220" /> |
+**Phase 4**
+
+
+| My Cart Screen | Checkout Screen | Order Accepted Screen | Account Screen |
+|:---:|:---:|:---:|:---:|
+| <img src="https://github.com/user-attachments/assets/fa318b1c-dfc6-4ec1-95f8-74570fc2f25f" width="220" /> | <img src="https://github.com/user-attachments/assets/8f0d9678-fbd5-450f-a582-c3b8d5f2b854" width="220" /> | <img src="https://github.com/user-attachments/assets/435daff0-7014-4e39-ac46-a58dc7e74cf0" width="220" /> | <img src="https://github.com/user-attachments/assets/54ca4f8d-a41a-491d-8140-7545288c75a3" width="220" /> |
 ---
 
 
@@ -36,11 +52,10 @@
 - **Onboarding Flow:** Splash & Welcome screens.
 - **Authentication UI:** Login & Registration screens.
 - **Forget Password UI:** Number & Verification screens.
-- **Main App Screens:** shope screen & Product Details Screen..
+- **Main App Screens:** shope screen & Product Details Screen & Cart & Checkout .
   
   
 **🔜 Coming Soon:**
-- Cart & Checkout Implementation.
 - Backend Integration (Firebase/API).
 - State Management Logic.
 
