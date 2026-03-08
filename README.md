@@ -85,6 +85,9 @@ If you want to test the UI on your machine:
    ```bash
    flutter run
 
+## Or try the app directly on the web
+https://fareseed-green-mart.netlify.app/
+
 
 ## 📧 Contact
 
